@@ -5,8 +5,8 @@ setup(
     version="0.0.1beta",
     description="a tool to insta-create your project structure",
     author="SpicyPenguin",
-    packages=find_packages(include=["ProjectInit", "ProjectInit.vault.*", "ProjectInit.dbs"]),
-    package_data={"": ["*.prisma"]},
+    packages=find_packages(include=["ProjectInit", "ProjectInit.vault", "ProjectInit.dbs"]),
+    package_data={"": ["*.prisma", "*.json", "vault"]},
     include_package_data=True,
     entry_points={
         "console_scripts": [

@@ -1,20 +1,20 @@
-ProjectInit: A Rapid Project Structure Generator
+project-init: A Rapid Project Structure Generator
 ```
-ProjectInit is a command-line tool designed to streamline the process of creating new projects by automatically generating basic project structures based on predefined templates.
+project-init is a command-line tool designed to streamline the process of creating new projects by automatically generating basic project structures based on predefined templates.
 
 It's a handy tool for developers who want to quickly get started on a new project without having to manually set up the initial files and directories.
 ```
 
 ## **Installation**
-To install ProjectInit, use pip:
+To install project-init, use pip:
 
 ```bash
-pip install projectinit
+pip install project-init
 ```
 
 ## **Usage**
 ```bash
-projectinit --generate <template_name> --output <output_directory> --db <supported_database>
+project-init --generate <template_name> --output <output_directory> --db <supported_database>
 ```
 
 `--generate`: Specifies the desired template to use.
@@ -26,31 +26,27 @@ projectinit --generate <template_name> --output <output_directory> --db <support
 ## Examples
 Create a new telegram bot project:
 ```bash
-projectinit --generate TelegramBot --output my_python_project --db prisma
+project-init --generate TelegramBot --output my_python_project --db prisma
 ```
 
 Generate a API structure:
 ```bash
-projectinit --generate API --output my_web_app --db sqlite
+project-init --generate API --output my_web_app --db sqlite
 ```
 
 You can also make your own templates
 ```bash
-projectinit --add PATH/TO/TEMPLATE
+project-init --add PATH/TO/TEMPLATE
 ```
 
-
-### Ready Templates
-Currently, ProjectInit offers the following templates:
-
-1. **TelegramBot (Simple/Large): a telegram bot project with pyrogram lib.**
-
-2. **python-project: A Python project template with a main.py file and a readme.md file.**
-
-3. **API (FastAPI/Flask): a python project with FastAPI or Flask.**
+then generate it
+```bash
+# e.g project-init --add MyTemplates/WebApp
+project-init --generate WebApp
+```
 
 ## **Contributing**
 We welcome contributions! Feel free to submit pull requests or issues on our GitHub repository.
 
 ## **License**
-ProjectInit is distributed under the MIT License.
+project-init is distributed under the MIT License.

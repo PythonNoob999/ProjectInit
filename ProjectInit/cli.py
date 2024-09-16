@@ -3,6 +3,7 @@ import os, sys
 from .funcs import *
 
 def main():
+    config()
     parser = ArgumentParser()
     #parser.add_argument("--", help="", type=str,required=False)
     # main options
