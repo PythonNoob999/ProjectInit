@@ -14,10 +14,10 @@ pip install projectinit
 
 ## **Usage**
 ```bash
-projectinit --template <template_name> --output <output_directory> --db <supported_database>
+projectinit --generate <template_name> --output <output_directory> --db <supported_database>
 ```
 
-`--template`: Specifies the desired template to use.
+`--generate`: Specifies the desired template to use.
 
 `--output`: Sets the output directory for the generated project.
 
@@ -26,12 +26,12 @@ projectinit --template <template_name> --output <output_directory> --db <support
 ## Examples
 Create a new telegram bot project:
 ```bash
-projectinit --template TelegramBot --output my_python_project --db prisma
+projectinit --generate TelegramBot --output my_python_project --db prisma
 ```
 
 Generate a API structure:
 ```bash
-projectinit --template API --output my_web_app --db sqlite
+projectinit --generate API --output my_web_app --db sqlite
 ```
 
 You can also make your own templates
