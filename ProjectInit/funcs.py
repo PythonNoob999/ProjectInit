@@ -1,18 +1,23 @@
 import os, shutil, pathlib, json
 
 main_path = pathlib.Path("\\".join(os.path.realpath(__file__).split("\\")[:-1]))
-vault_path = main_path / "vault\\"
-dbs_path = main_path / "dbs\\"
+vault_path = None
+dbs_path = None
 
 def config():
+    global vault_path, dbs_path
     # check user settings file
     if not os.path.exists(main_path/"settings.json"):
         with open(main_path/"settings.json", "w+") as f:
             f.write(json.dumps({
-                "vaultPath": vault_path.__str__(),
-                "dbsPath": dbs_path.__str__()
+                "vaultPath": (main_path/"vault").absolute().__str__(),
+                "dbsPath": (main_path/"dbs").absolute().__str__()
             }, indent=4, ensure_ascii=False))
             f.close()
+    
+    data = json.load(open(main_path/"settings.json", "r"))
+    vault_path = pathlib.Path(data["vaultPath"])
+    dbs_path = pathlib.Path(data["dbsPath"])
 
 def ignore(_, files):
     return [file for file in files if file == "__pycache__"]
