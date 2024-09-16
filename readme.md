@@ -41,9 +41,15 @@ project-init --add PATH/TO/TEMPLATE
 
 then generate it
 ```bash
-# e.g project-init --add MyTemplates/WebApp
+project-init --add MyTemplates/WebApp
+# saved in vault ✅
 project-init --generate WebApp
 ```
+
+## TODO
+1. remove ready templates [ ✔️ ]
+2. let user edit vault path & move it [ ]
+3. add a marketplace for templates [ ]
 
 ## **Contributing**
 We welcome contributions! Feel free to submit pull requests or issues on our GitHub repository.
