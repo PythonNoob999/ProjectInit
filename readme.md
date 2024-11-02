@@ -1,4 +1,4 @@
-project-init: A Rapid Project Structure Generator
+project-init: A Rapid Project Structure Generator 
 ```
 project-init is a command-line tool designed to streamline the process of creating new projects by automatically generating basic project structures based on predefined templates.
 
